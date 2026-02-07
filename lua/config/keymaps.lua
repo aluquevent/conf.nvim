@@ -5,7 +5,6 @@ end, { desc = "Open Diagnostics in Float" })
 
 local opts = { noremap = true, silent = true }
 
-vim.keymap.set("n", "<leader>fp", ":ProjectFzf<CR>", opts)
 -- save file
 vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
 
@@ -37,6 +36,12 @@ vim.keymap.set('n', '<Tab>', ':bnext<CR>', opts)
 vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', opts)
 vim.keymap.set('n', '<leader>x', ':bdelete!<CR>', opts) -- close buffer
 vim.keymap.set('n', '<leader>b', '<cmd> enew <CR>', opts) -- new buffer
+
+-- Window navigation
+vim.keymap.set('n', '<C-h>', '<C-w>h', opts)
+vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
+vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
+vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 
 -- Window management
 vim.keymap.set('n', '<leader>v', '<C-w>v', opts) -- split window vertically

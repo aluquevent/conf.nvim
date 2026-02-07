@@ -1,4 +1,4 @@
-vim.opt.expandtab = false -- Convert tabs to spaces
+vim.opt.expandtab = false -- Keep tabs as tabs (not spaces)
 vim.opt.shiftwidth = 4 -- Amount to indent with << and >>
 vim.opt.tabstop = 4 -- How many spaces are shown per Tab
 vim.opt.softtabstop = 4 -- How many spaces are applied when pressing Tab
@@ -44,3 +44,6 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 8
+
+-- Sync clipboard with system
+vim.opt.clipboard = 'unnamedplus'
