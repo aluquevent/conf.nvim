@@ -58,6 +58,11 @@ return {
             sources = {
                 default = { "lsp", "path", "snippets", "buffer", "emoji" },
                 providers = {
+                    snippets = {
+                        opts = {
+                            search_paths = { vim.fn.stdpath("config") .. "/snippets" },
+                        },
+                    },
                     emoji = {
                         module = "blink-emoji",
                         name = "Emoji",

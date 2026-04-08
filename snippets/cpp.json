@@ -1,0 +1,51 @@
+{
+	"OCF Header": {
+		"prefix": "ocfh",
+		"description": "Orthodox Canonical Form - Header",
+		"body": [
+			"#ifndef ${2:CLASSNAME}_HPP",
+			"# define ${2}_HPP",
+			"",
+			"class ${1:ClassName} {",
+			"private:",
+			"\t$0",
+			"",
+			"public:",
+			"\t${1}();",
+			"\t${1}(const ${1}& other);",
+			"\t${1}& operator=(const ${1}& other);",
+			"\t~${1}();",
+			"};",
+			"",
+			"#endif //!${2}_HPP"
+		]
+	},
+	"OCF Source": {
+		"prefix": "ocfs",
+		"description": "Orthodox Canonical Form - Source",
+		"body": [
+			"#include \"${1:ClassName}.hpp\"",
+			"",
+			"${1}::${1}()",
+			"{",
+			"}",
+			"",
+			"${1}::${1}(const ${1}& other)",
+			"{",
+			"}",
+			"",
+			"${1}& ${1}::operator=(const ${1}& other)",
+			"{",
+			"\tif (this != &other)",
+			"\t{",
+			"\t\t$0",
+			"\t}",
+			"\treturn (*this);",
+			"}",
+			"",
+			"${1}::~${1}()",
+			"{",
+			"}"
+		]
+	}
+}

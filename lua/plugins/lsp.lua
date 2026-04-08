@@ -109,6 +109,7 @@ return {
             marksman = {},
             clangd = {},
             vimls = {},
+            ts_ls = {},
             pyright = {},
             lua_ls = {
                 settings = {
